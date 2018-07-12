@@ -1,5 +1,5 @@
-var facebookprofile = /** @class */ (function () {
-    function facebookprofile(id, about, address, name, age, email, Birthday, gender, noofpics, quote, bussiness_user) {
+var facebook_profile = /** @class */ (function () {
+    function facebook_profile(id, about, address, name, age, email, Birthday, gender, noofpics, quote, bussiness_user) {
         var _this = this;
         this.getbusiness_user = function () {
             return _this.bussiness_user;
@@ -36,19 +36,19 @@ var facebookprofile = /** @class */ (function () {
         this.bussiness_user = bussiness_user;
         this.age = age;
     }
-    return facebookprofile;
+    return facebook_profile;
 }());
-var user1 = new facebookprofile(10253, "i am very cool person", "daltonganj", "manish", 22, "manishagrawal1994@gmail.com", "14121994", "Male", 14, "arise awake and stop not till goal is acheived", true);
-console.log(user1.id);
-console.log(user1.about);
-console.log(user1.name);
-console.log(user1.getage());
-console.log(user1.getemail());
-console.log(user1.getBirthday());
-console.log(user1.getgender());
-console.log(user1.address);
-console.log(user1.noofpics);
-console.log(user1.getquote());
-console.log(user1.getbusiness_user());
-user1.setbusiness_user(false);
-console.log(user1.getbusiness_user());
+var user = new facebook_profile(10253, "i am very cool person", "daltonganj", "manish", 22, "manishagrawal1994@gmail.com", "14121994", "Male", 14, "arise awake and stop not till goal is acheived", true);
+console.log(user.id);
+console.log(user.about);
+console.log(user.name);
+console.log(user.getage());
+console.log(user.getemail());
+console.log(user.getBirthday());
+console.log(user.getgender());
+console.log(user.address);
+console.log(user.noofpics);
+console.log(user.getquote());
+console.log(user.getbusiness_user());
+user.setbusiness_user(false);
+console.log(user.getbusiness_user());

@@ -1,4 +1,4 @@
-class facebookprofile{
+class facebook_profile{
     id:number;
     about:string;
     name:string;
@@ -53,17 +53,17 @@ class facebookprofile{
     
 }
 
-let user1=new facebookprofile(10253,"i am very cool person","daltonganj","manish",22,"manishagrawal1994@gmail.com","14121994","Male",14,"arise awake and stop not till goal is acheived",true);
-console.log(user1.id);
-console.log(user1.about);
-console.log(user1.name);
-console.log(user1.getage());
-console.log(user1.getemail());
-console.log(user1.getBirthday());
-console.log(user1.getgender());
-console.log(user1.address);
-console.log(user1.noofpics);
-console.log(user1.getquote());
-console.log(user1.getbusiness_user());
-user1.setbusiness_user(false);
-console.log(user1.getbusiness_user());
+let user=new facebook_profile(10253,"i am very cool person","daltonganj","manish",22,"manishagrawal1994@gmail.com","14121994","Male",14,"arise awake and stop not till goal is acheived",true);
+console.log(user.id);
+console.log(user.about);
+console.log(user.name);
+console.log(user.getage());
+console.log(user.getemail());
+console.log(user.getBirthday());
+console.log(user.getgender());
+console.log(user.address);
+console.log(user.noofpics);
+console.log(user.getquote());
+console.log(user.getbusiness_user());
+user.setbusiness_user(false);
+console.log(user.getbusiness_user());

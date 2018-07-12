@@ -1,5 +1,5 @@
 var youtubevideo = /** @class */ (function () {
-    function youtubevideo(ChannelName, Content, Title, ContentType, Likes, Dislikes, PublishionDate, DownloadAllowed, TotalComment, NoOfView) {
+    function youtubevideo(ChannelName, ContentDescription, Title, ContentType, Likes, Dislikes, PublishionDate, DownloadAllowed, TotalComment, NoOfView, link) {
         var _this = this;
         this.getnoofview = function () {
             return _this.NoOfView;
@@ -16,10 +16,13 @@ var youtubevideo = /** @class */ (function () {
         this.gettitle = function () {
             return _this.Title;
         };
+        this.getlink = function () {
+            return _this.link;
+        };
         this.getRelatedvideo = function () { };
         this.getadsRevenue = function () { };
         this.ChannelName = ChannelName;
-        this.Content = Content;
+        this.ContentDescription = ContentDescription;
         this.Title = Title;
         this.ContentType = ContentType;
         this.Likes = Likes;
@@ -28,12 +31,13 @@ var youtubevideo = /** @class */ (function () {
         this.DownloadAllowed = DownloadAllowed;
         this.TotalComment = TotalComment;
         this.NoOfView = NoOfView;
+        this.link = link;
     }
     return youtubevideo;
 }());
-var HumseAcha = new youtubevideo("oldisgold", "Normal", "Dilchatahai", "Song", 40, 5, "14dec2015", true, 20, 1000);
+var HumseAcha = new youtubevideo("oldisgold", "Romantic song collection", "Dilchatahai", "Song", 40, 5, "14dec2015", true, 20, 1000, "www.youtube.com/tdtydy23");
 console.log(HumseAcha.ChannelName);
-console.log(HumseAcha.Content);
+console.log(HumseAcha.ContentDescription);
 console.log(HumseAcha.ContentType);
 console.log(HumseAcha.Dislikes);
 console.log(HumseAcha.DownloadAllowed);
@@ -41,6 +45,7 @@ console.log(HumseAcha.getnoofview());
 console.log(HumseAcha.getPublishionDate());
 console.log(HumseAcha.getlike());
 console.log(HumseAcha.gettitle());
+console.log(HumseAcha.getlink());
 console.log(HumseAcha.TotalComment);
 HumseAcha.setnoofview(500);
 console.log(HumseAcha.getnoofview());

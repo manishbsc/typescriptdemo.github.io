@@ -1,6 +1,6 @@
 class youtubevideo{
     ChannelName:string;
-    Content:string;
+    ContentDescription:string;
     Title:string;
     ContentType:string;
     Likes:number;
@@ -9,10 +9,11 @@ class youtubevideo{
     DownloadAllowed:boolean;
     TotalComment:number;
     private NoOfView:number;
+    link:string
 
-    constructor(ChannelName:string,Content:string,Title:string,ContentType:string,Likes:number,Dislikes:number,PublishionDate:string,DownloadAllowed:boolean, TotalComment:number,NoOfView:number){
+    constructor(ChannelName:string,ContentDescription:string,Title:string,ContentType:string,Likes:number,Dislikes:number,PublishionDate:string,DownloadAllowed:boolean, TotalComment:number,NoOfView:number, link:string){
        this.ChannelName=ChannelName;
-        this.Content=Content;
+        this.ContentDescription=ContentDescription;
         this.Title=Title;
         this.ContentType=ContentType;
         this.Likes=Likes;
@@ -21,6 +22,7 @@ class youtubevideo{
        this.DownloadAllowed=DownloadAllowed;
        this.TotalComment=TotalComment;
        this.NoOfView=NoOfView;
+       this.link=link;
     }
 
     getnoofview=()=>{
@@ -39,15 +41,18 @@ class youtubevideo{
     gettitle=()=>{
         return this.Title;
        }
+    getlink=()=>{
+        return this.link;
+       }
     getRelatedvideo=()=>{}
     getadsRevenue=()=>{}
 
     
 }
 
-let HumseAcha=new youtubevideo("oldisgold","Normal","Dilchatahai","Song",40,5,"14dec2015",true,20,1000);
+let HumseAcha=new youtubevideo("oldisgold","Romantic song collection","Dilchatahai","Song",40,5,"14dec2015",true,20,1000,"www.youtube.com/tdtydy23");
 console.log(HumseAcha.ChannelName);
-console.log(HumseAcha.Content);
+console.log(HumseAcha.ContentDescription);
 console.log(HumseAcha.ContentType);
 console.log(HumseAcha.Dislikes);
 console.log(HumseAcha.DownloadAllowed);
@@ -55,6 +60,7 @@ console.log(HumseAcha.getnoofview());
 console.log(HumseAcha.getPublishionDate());
 console.log(HumseAcha.getlike());
 console.log(HumseAcha.gettitle());
+console.log(HumseAcha.getlink());
 console.log(HumseAcha.TotalComment);
 HumseAcha.setnoofview(500);
 console.log(HumseAcha.getnoofview());
